@@ -118,7 +118,6 @@ dist
 .DS_Store
 
 .idea
-bin
 lib
 types
 output
