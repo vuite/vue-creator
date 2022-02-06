@@ -1,0 +1,30 @@
+if lang.script !== 'jsx' && lang.script !== 'tsx'
+	template(lang=lang.template === 'pug' ? 'pug' : undefined)
+		|
+		|
+		include template.pug
+		|
+		|
+|
+|
+|
+
+script(lang=lang.script !== 'js' ? lang.script : undefined)
+	|
+	|
+	include script.pug
+	|
+	|
+|
+|
+|
+
+if generate.separateFiles
+	style(lang=lang.style !== 'css' ? lang.style : undefined, src='./' + names.camel + '.' + lang.style)
+else
+	style(lang=lang.style !== 'css' ? lang.style : undefined)
+		|
+		|
+		include style.pug
+		|
+		|

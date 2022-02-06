@@ -1,0 +1,42 @@
+{
+	"compilerOptions": {
+		"module": "commonjs",
+		"target": "ES5",
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"moduleResolution": "node",
+		"strict": true,
+		"outDir": "lib",
+		"declaration": true,
+		"declarationDir": "types",
+		"esModuleInterop": true,
+		"resolveJsonModule": true,
+		"importHelpers": true,
+		"baseUrl": ".",
+		"lib": [
+			"ES6",
+			"ES2015",
+			"DOM"
+		],
+		"types": [
+			"node",
+			"inquirer",
+			"figlet",
+			"fs-extra",
+			"listr",
+			"pug",
+			"command-line-args",
+			"command-line-usage"
+		]
+	},
+	"files": [
+		"src/index.ts"
+	],
+	"exclude": [
+		"node_modules",
+		"lib",
+		"templates",
+		"types",
+		"tests"
+	]
+}
