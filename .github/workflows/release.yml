@@ -1,0 +1,23 @@
+name: Release
+on:
+ push:
+   tags:
+     - 'v*'
+jobs:
+  release:
+    name: Publish Package
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 12
+          registry-url: 'https://registry.npmjs.org'
+          scope: '@vuite'
+      - run: yarn install
+      - run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
