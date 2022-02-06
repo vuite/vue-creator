@@ -1,6 +1,6 @@
 {
   "name": "@vuite/vue-creator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Command-Line tool for creating VueJS (2 & 3) Component/Directive file(s)",
   "keywords": [
     "cli",
